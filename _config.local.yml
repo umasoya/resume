@@ -24,7 +24,7 @@ description: >-
   This site showcases my resume and work history as a system engineer based in Tokyo🗼.
   I have experience in PHP, JavaScript/Typescript, Golang, and Python development, as well as infrastructure management with Docker and Terraform.
   I am looking for new challenges to grow my career.
-baseurl: "/resume" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://umasoya.me" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: umasoya
 

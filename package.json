@@ -4,6 +4,7 @@
     "tailwindcss": "^4.0.7"
   },
   "scripts": {
-    "build": "tailwindcss build src/resume.css -o assets/css/resume.css"
+    "build": "tailwindcss build src/resume.css -o assets/css/resume.css",
+    "serve": "bundle exec jekyll serve --config _config.yml,_config.local.yml"
   }
 }

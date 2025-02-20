@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/**
+ * 印刷用スタイル
+ */
+@media print {
+  body {
+    font-size: 12pt; /* 読みやすいフォントサイズ */
+    line-height: 1.5; /* 行間を調整 */
+    color: black; /* 印刷時は黒色を基本 */
+    background: none; /* 背景を印刷しない */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 180mm; /* A4の横幅より少し小さめに */
+    margin: 0 auto;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid; /* 見出しの途中で改ページしない */
+  }
+
+  p, ul, ol, table {
+    page-break-inside: avoid; /* 段落やリスト、表を途中で切らない */
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .no-print {
+    display: none; /* ボタンやナビゲーションを非表示 */
+  }
+}
