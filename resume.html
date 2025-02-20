@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歴書</title>
+    <link rel="stylesheet" href="/assets/css/resume.css">
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="w-full flex justify-start items-end mb-6">
+            <h1 class="text-2xl font-bold">履歴書</h1>
+            <span class="text-sm font-light ml-2">(<span id="today"></span>現在)</span>
+        </div>
+
+        <!-- 基本情報 -->
+        <section class="border-b pb-4">
+            <div>
+                <p class="font-bold">氏名(ふりがな)</p>
+                <p class="p-2">相馬 康人(そうま やすと)</p>
+            </div>
+            <div>
+                <p class="font-bold">生年月日</p>
+                <p id="birthday_and_age" class="p-2"></p>
+            </div>
+            <div>
+                <p class="font-bold">性別</p>
+                <p class="p-2">男性</p>
+            </div>
+            <div>
+                <p class="font-bold">Email</p>
+                <p class="p-2">umasoya.0331@gmail.com</p>
+            </div>
+        </section>
+
+        <!-- 学歴 -->
+        <section class="border-b pb-4 mt-4">
+            <table class="table-fixed border-separate border-spacing-2">
+                <thead>
+                    <tr>
+                        <th class="w-ym">年月</th>
+                        <th>学歴</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2011年3月</td>
+                        <td>北海道旭川凌雲高等学校 卒業</td>
+                    </tr>
+                    <tr>
+                        <td>2012年4月</td>
+                        <td>公立はこだて未来大学 情報システム学科 入学</td>
+                    </tr>
+                    <tr>
+                        <td>2016年3月</td>
+                        <td>公立はこだて未来大学 情報システム学科 中退</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        const today = new Date();
+        document.getElementById('today').textContent = `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日`;
+
+        /**
+         * 生年月日から年齢を計算する
+         */
+        const calculateAge = () => {
+            const myBirthDay = new Date(1993, 2, 31); // 月だけ0始まり
+            const currentYearsBirthday = new Date(today.getFullYear(), myBirthDay.getMonth(), myBirthDay.getDate());
+            let age = today.getFullYear() - myBirthDay.getFullYear();
+            if (today < currentYearsBirthday) {
+                age--;
+            }
+            document.getElementById('birthday_and_age').textContent = `1993年03月31日（${age}歳）`;
+        };
+        calculateAge();
+    </script>
+</body>
+</html>

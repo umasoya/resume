@@ -607,50 +607,14 @@
     font-weight: var(--font-weight-light);
   }
 }
-:root {
-  --font-size: 16px;
-  --line-height: 1.75;
-  --color: #333;
-  --background-color: #f7f7f7;
-}
 html,body {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  color: var(--color);
-  background-color: var(--background-color);
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #f7f7f7;
   width: 100vw;
   height: 100vh;
-}
-.w-ym {
-  width: calc(var(--font-size) * 7);
-}
-@media print {
-  :root {
-    --font-size: 12pt;
-    --line-height: 1.5;
-    --color: black;
-    --background-color: none;
-  }
-  body {
-    width: 210mm;
-    height: 297mm;
-    padding: 20mm;
-  }
-  .container {
-    width: 100%;
-    max-width: 180mm;
-    margin: 0 auto;
-  }
-  h1, h2, h3 {
-    page-break-after: avoid;
-  }
-  p, ul, ol, table {
-    page-break-inside: avoid;
-  }
-  .no-print {
-    display: none;
-  }
 }
 @keyframes spin {
   to {
