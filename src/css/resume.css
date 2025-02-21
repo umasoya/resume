@@ -17,6 +17,10 @@ html,body {
   height: 100%;
 }
 
+body {
+  padding: 1rem;
+}
+
 .w-ym {
   width: calc(var(--font-size) * 7);
 }
