@@ -17,11 +17,11 @@
         <section class="border-b pb-4">
             <div>
                 <p class="font-bold">氏名(ふりがな)</p>
-                <p class="p-2">相馬 康人(そうま やすと)</p>
+                <p class="p-2">{{ site.name }}({{ site.name_ruby }})</p>
             </div>
             <div>
                 <p class="font-bold">生年月日</p>
-                <p id="birthday_and_age" class="p-2"></p>
+                <p class="p-2">1993年03月31日(<span id="age"></span>歳)</p>
             </div>
             <div>
                 <p class="font-bold">性別</p>
@@ -29,7 +29,7 @@
             </div>
             <div>
                 <p class="font-bold">Email</p>
-                <p class="p-2">umasoya.0331@gmail.com</p>
+                <p class="p-2">{{ site.email | default: "メールアドレス" }}</p>
             </div>
         </section>
 
@@ -121,7 +121,7 @@
             if (today < currentYearsBirthday) {
                 age--;
             }
-            document.getElementById('birthday_and_age').textContent = `1993年03月31日（${age}歳）`;
+            document.getElementById('age').textContent = `${age}`;
         };
         calculateAge();
     </script>

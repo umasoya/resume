@@ -31,6 +31,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: 環境変数を設定
+        run: |
+          echo "NAME=${{ secrets.NAME }}" >> $GITHUB_ENV
+          echo "NAME_RUBY=${{ secrets.NAME_RUBY }}" >> $GITHUB_ENV
+          echo "EMAIL=${{ secrets.EMAIL }}" >> $GITHUB_ENV
+
+      - name: _config_private.ymlを動的に作成
+        run: |
+          echo "name: $NAME" >> _config_private.yml
+          echo "name_ruby: $NAME_RUBY" >> _config_private.yml
+          echo "email: $EMAIL" >> _config_private.yml
+
+
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
@@ -45,7 +58,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        # _config_private.yml is used to store private configuration
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config  _config.yml,_config_private.yml
         env:
           JEKYLL_ENV: production
       - name: Upload artifact

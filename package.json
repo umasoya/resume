@@ -5,6 +5,6 @@
   },
   "scripts": {
     "build": "tailwindcss -i src/css/index.css -o assets/css/index.css & tailwindcss -i src/css/resume.css -o assets/css/resume.css",
-    "serve": "bundle exec jekyll serve --config _config.yml,_config.local.yml"
+    "serve": "bundle exec jekyll serve --config _config.yml,_config.local.yml,_config.private.yml"
   }
 }
