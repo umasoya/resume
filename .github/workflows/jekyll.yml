@@ -39,10 +39,9 @@ jobs:
 
       - name: _config_private.ymlを動的に作成
         run: |
-          echo "name: $NAME" >> _config_private.yml
+          echo "name: $NAME" > _config_private.yml
           echo "name_ruby: $NAME_RUBY" >> _config_private.yml
           echo "email: $EMAIL" >> _config_private.yml
-
 
       - name: Checkout
         uses: actions/checkout@v4
