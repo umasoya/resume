@@ -39,9 +39,9 @@ jobs:
 
       - name: _config_private.ymlを動的に作成
         run: |
-          echo "name: $NAME" > _config_private.yml
-          echo "name_ruby: $NAME_RUBY" >> _config_private.yml
-          echo "email: $EMAIL" >> _config_private.yml
+          echo "name: $NAME" > _config_action.yml
+          echo "name_ruby: $NAME_RUBY" >> _config_action.yml
+          echo "email: $EMAIL" >> _config_action.yml
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         # _config_private.yml is used to store private configuration
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config  _config.yml,_config_private.yml
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --config  _config.yml,_config_action.yml
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
