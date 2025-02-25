@@ -21,6 +21,11 @@ body {
   padding: 1rem;
 }
 
+.content {
+  max-width: calc(var(--font-size) * 50);
+  word-break: keep-all;
+}
+
 /**
  * 印刷用スタイル
  */
