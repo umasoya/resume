@@ -598,6 +598,10 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -652,7 +656,8 @@ body {
   padding: 1rem;
 }
 .content {
-  max-width: calc(var(--font-size) * 40);
+  max-width: calc(var(--font-size) * 50);
+  word-break: keep-all;
 }
 @media print {
   :root {
@@ -675,6 +680,9 @@ body {
     page-break-after: avoid;
   }
   p, ul, ol, table {
+    page-break-inside: avoid;
+  }
+  section {
     page-break-inside: avoid;
   }
   .no-print {

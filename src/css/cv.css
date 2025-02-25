@@ -57,6 +57,10 @@ body {
     page-break-inside: avoid; /* 段落やリスト、表を途中で切らない */
   }
 
+  section {
+    page-break-inside: avoid; /* セクションを途中で切らない */
+  }
+
   .no-print {
     display: none; /* ボタンやナビゲーションを非表示 */
   }
