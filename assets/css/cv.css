@@ -598,10 +598,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -658,6 +654,9 @@ body {
 .content {
   max-width: calc(var(--font-size) * 50);
   word-break: keep-all;
+}
+hr {
+  margin: var(--font-size) 0;
 }
 @media print {
   :root {

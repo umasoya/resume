@@ -26,6 +26,10 @@ body {
   word-break: keep-all;
 }
 
+hr {
+  margin: var(--font-size) 0;
+}
+
 /**
  * 印刷用スタイル
  */
