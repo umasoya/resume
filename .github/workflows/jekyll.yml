@@ -39,12 +39,16 @@ jobs:
           echo "NAME=${{ secrets.NAME }}" >> $GITHUB_ENV
           echo "NAME_RUBY=${{ secrets.NAME_RUBY }}" >> $GITHUB_ENV
           echo "EMAIL=${{ secrets.EMAIL }}" >> $GITHUB_ENV
+          echo "ADDRESS=${{ secrets.ADDRESS }}" >> $GITHUB_ENV
+          echo "ZIP=${{ secrets.ZIP }}" >> $GITHUB_ENV
 
       - name: _config_private.ymlを動的に作成
         run: |
           echo "name: $NAME" > _config_private.yml
           echo "name_ruby: $NAME_RUBY" >> _config_private.yml
           echo "email: $EMAIL" >> _config_private.yml
+          echo "address: $ADDRESS" >> _config_private.yml
+          echo "zip: $ZIP" >> _config_private.yml
 
       - name: _config_private.ymlの内容を確認
         run: cat _config_private.yml
