@@ -29,7 +29,7 @@ body {
   word-break: keep-all;
 }
 
-.ul {
+ul {
   list-style: disc;
   padding-left: var(--ul-padding-left);
 }
