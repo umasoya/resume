@@ -659,8 +659,8 @@ body {
   word-break: keep-all;
 }
 ul {
-  list-style: disc;
-  padding-left: var(--ul-padding-left);
+  list-style: disc !important;
+  padding-left: var(--ul-padding-left) !important;
 }
 hr {
   margin: var(--font-size) 0;
