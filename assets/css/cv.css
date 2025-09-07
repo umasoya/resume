@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
+@charset "UTF-8";
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -636,6 +637,8 @@
 :root {
   --font-size: 16px;
   --line-height: 1.75;
+  --content-width: 80;
+  --ul-padding-left: 2rem;
   --color: #333;
   --background-color: #f7f7f7;
 }
@@ -652,8 +655,12 @@ body {
   padding: 1rem;
 }
 .content {
-  max-width: calc(var(--font-size) * 50);
+  max-width: calc(var(--font-size) * var(--content-width));
   word-break: keep-all;
+}
+ul {
+  list-style: disc;
+  padding-left: var(--ul-padding-left);
 }
 hr {
   margin: var(--font-size) 0;

@@ -1,4 +1,5 @@
 /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
+@charset "UTF-8";
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {

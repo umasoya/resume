@@ -30,8 +30,8 @@ body {
 }
 
 ul {
-  list-style: disc !important;
-  padding-left: var(--ul-padding-left) !important;
+  list-style: disc;
+  padding-left: var(--ul-padding-left);
 }
 
 hr {

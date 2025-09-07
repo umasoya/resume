@@ -4,6 +4,10 @@
 個人情報を含むので､環境変数化してビルド時に埋め込んでいる｡
 またwebページはCloudflareでプロキシさせて認証を通らないと見れないように設定している｡
 
+## css build
+
+`src/css` 以下のファイルを変更して `npm run build` を実行
+
 ## localでの確認方法
 
 `npm run serve` で確認可能｡
